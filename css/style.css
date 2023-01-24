@@ -1,0 +1,335 @@
+body{
+    display: flex;
+    flex-flow: column;
+    background: black;
+}
+#myVideo {
+    opacity: 0.7;
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.block-promo{
+    width: 100%;
+}
+.header{
+    text-align: center;
+}
+.header h1{
+    font-size: 70px;
+    color: white;
+}
+.block-product{
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+.product-img{
+    width: 50%;
+    animation: appear 2s ease-in-out;
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.block-product-specification{
+    margin-top: 100px;
+    width: 50%;
+    color: white;
+    animation: slide-right 2s ease-in-out;
+    padding: 60px;
+}
+@keyframes slide-right {
+    0% {
+        transform: translateX(100%);
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@keyframes slide-left {
+    0% {
+        transform: translateX(-100%);
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+button{
+    margin-top: 20px;
+    color: white;
+    background: black;
+    border-radius: 10px;
+    padding: 7px;
+}
+@media screen and (max-width: 625px) {
+    .block-product{
+        flex-flow: column;
+    }
+    .product-img{
+        width: 100%;
+    }
+    .block-product-specification{
+        width: 100%;
+    }
+}
+.block-composition-product{
+    display: flex;
+    margin-top: 100px;
+    text-align: center;
+    opacity: 0;
+}
+.block-composition-product.animate {
+    opacity: 1;
+}
+.compositions-1{
+    width: 25%;
+    text-align: -webkit-center;
+}
+.compositions-1.animate{
+    animation: slide-left 2s ease-in-out;
+}
+.product-compositions-img{
+    display: flex;
+    width: 50%;
+    align-self: center;
+    justify-content: center;
+}
+.product-compositions-img.animate{
+    animation: appear 2s ease-in-out;
+}
+.product-compositions-img img{
+    height: 200px;
+}
+.compositions-2{
+    width: 25%;
+    text-align: -webkit-center;
+}
+.compositions-2.animate{
+    animation: slide-right 2s ease-in-out;
+}
+.block-compositions {
+    background: white;
+    width: 150px;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 15px;
+}
+.line-container{
+    text-align: -webkit-center;
+}
+.line-up-right {
+    height: 2px;
+    background-color: white;
+    animation: stretchLine 2s ease-in-out;
+    transform: rotate(45deg);
+    width: 100px;
+    margin-bottom: 100px;
+}
+.line-center-right {
+    height: 2px;
+    background-color: white;
+    animation: stretchLineCenter 2s ease-in-out;
+    width: 60px;
+    margin-bottom: 100px;
+}
+.line-down-right {
+    height: 2px;
+    background-color: white;
+    animation: stretchLine 2s ease-in-out;
+    transform: rotate(-45deg);
+    width: 100px;
+}
+.line-up-left {
+    height: 2px;
+    background-color: white;
+    animation: stretchLine 2s ease-in-out;
+    transform: rotate(-45deg);
+    width: 100px;
+    margin-bottom: 100px;
+}
+.line-center-left {
+    height: 2px;
+    background-color: white;
+    animation: stretchLineCenter 2s ease-in-out;
+    width: 60px;
+    margin-bottom: 100px;
+}
+.line-down-left {
+    height: 2px;
+    background-color: white;
+    animation: stretchLine 2s ease-in-out;
+    transform: rotate(45deg);
+    width: 100px;
+}
+@keyframes stretchLineCenter {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 60px;
+    }
+}
+
+@keyframes stretchLine {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 100px;
+    }
+}
+.block-reviews{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-self: center;
+    background: linear-gradient(180deg, #A8D5FF 0%, #FFFFFF 100%);
+}
+.block-review-1 {
+    align-self: center;
+    text-align: center;
+    display: none;
+    opacity: 0;
+}
+.reviews-photo{
+    padding: 20px;
+    text-align: center;
+}
+.reviews-photo img{
+    height: 300px;
+}
+.review{
+    width: 700px;
+    background: white;
+    border-radius: 30px;
+}
+.current {
+    display: block;
+    animation: opacityblock 5s ease-out;
+}
+@keyframes opacityblock {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.block-promo-2{
+    display: flex;
+    flex-flow: column;
+    padding: 30px;
+}
+.block-promo-2 p{
+    color: white;
+}
+.block-promo-top{
+    display: flex;
+}
+.doctor-img{
+    width: 50%;
+}
+.block-product-description{
+    width: 50%;
+    align-self: center;
+}
+.block-product-specification-2{
+    padding-top: 30px;
+    text-align: -webkit-center;
+}
+.specifications{
+    display: flex;
+}
+.specifications p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.block-form{
+    background: linear-gradient(to right, #E8B5CE, #C5B3D9);
+}
+.block-form h1{
+    font-size: 70px;
+    color: white;
+}
+.product-name-timer{
+    text-align: center;
+}
+.countdown-timer{
+    font-size: 30px;
+    color: white;
+}
+.prod-price{
+    width: 50%;
+    text-align: center;
+}
+.prod-form{
+    width: 50%;
+    text-align: -webkit-center;
+    margin-top: 150px;
+}
+.block-prod-form{
+    display: flex;
+}
+form {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: center;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+}
+.pricing{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+}
+.new-price{
+    padding-left: 15px;
+    animation: pulse 1s ease-in-out infinite;
+}
+@keyframes pulse {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.example {
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+input{
+    height: 25px;
+}
