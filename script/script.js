@@ -10,7 +10,8 @@ if(objects.length > 0){
             }
         });
     });
-};
+}
+
 let slideIndex = 0;
 const slides = document.getElementsByClassName("block-review-1");
 const timeout = 5000;
@@ -28,7 +29,6 @@ showSlides();
 
 let timeLeft = 1800; // 30 minutes in seconds
 let countdownTimer = document.getElementById("timer");
-
 let countDown = setInterval(function() {
     let minutes = Math.floor(timeLeft / 60);
     let seconds = timeLeft % 60;
@@ -38,6 +38,7 @@ let countDown = setInterval(function() {
         countdownTimer.innerHTML = "Expired";
     }
 }, 1000);
+
 $(document).ready(function() {
     $("#name").focus(function() {
         $(this).before('<span class="example">Пример: Иван Иванов</span>');
